@@ -1,0 +1,26 @@
+@import url("../index.scss");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,800;1,400;1,500;1,600;1,700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+$darkBg: #040404;
+$navItemHoverBg: #232a3f;
+$white: #ffffff;
+$gray: #858688;
+$secondary: #f1f1f1;
+
+@mixin container {
+    margin-left: 106px;
+}
+
+@mixin button {
+    padding: 12px 32px;
+    height: 44px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

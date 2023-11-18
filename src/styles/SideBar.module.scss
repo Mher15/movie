@@ -1,0 +1,153 @@
+@import "./variable.scss";
+
+.side_bar {
+    background: linear-gradient(-90deg, rgba(4, 4, 4, 0.9) 100%, rgba(4, 4, 4, 0.9) 0%);
+    display: inline-flex;
+    flex-direction: column;
+    padding: 24px;
+    transition: all 0.3s linear;
+    height: 100vh;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    &:hover {
+        -webkit-box-shadow: 55px 2px 57px 59px rgba(4, 4, 4, 0.9);
+        -moz-box-shadow: 55px 2px 57px 59px rgba(4, 4, 4, 0.9);
+        box-shadow: 55px 2px 57px 59px rgba(4, 4, 4, 0.9);
+        .user_info {
+            transition: all 0.3s ease-in;
+            width: 250px;
+            .img_block {
+                img {
+                    transition: all 0.3s ease-in;
+                    width: 55px;
+                    opacity: 1;
+                }
+            }
+            span {
+                transition: all 0.3s ease-in;
+                width: 100%;
+            }
+        }
+        .nav {
+            .nav_list {
+                .nav_item {
+                    justify-content: flex-start;
+                    border-radius: 8px;
+                    transition: all 0.3s ease-in;
+                    width: 250px;
+                }
+            }
+        }
+        .side_bar_footer {
+            opacity: 1;
+            display: block;
+            transition: all 0.3s ease-in;
+        }
+    }
+    .user_info {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        transition: all 0.3s linear;
+        width: 55px;
+        height: 55px;
+        margin: 16px 0;
+        cursor: pointer;
+        .img_block {
+            width: 55px;
+            height: 55px;
+            img {
+                transition: all 0.3s linear;
+                border-radius: 50%;
+                width: 55px;
+                height: 55px;
+                opacity: 0;
+                object-fit: cover;
+            }
+        }
+        span {
+            transition: all 0.3s linear;
+            font-weight: 600;
+            margin-left: 24px;
+            display: inline-block;
+            width: 0;
+            color: $white;
+        }
+    }
+
+    .nav {
+        .nav_list {
+            .nav_item {
+                display: flex;
+                align-items: center;
+                border-radius: 50%;
+                transition: all 0.3s linear;
+                width: 55px;
+                height: 55px;
+                cursor: pointer;
+                overflow: hidden;
+                margin: 2px 0;
+                a {
+                    display: flex;
+                    align-items: center;
+                    color: $white;
+                    transition: all 0.3s linear;
+                    .img_block {
+                        width: 55px;
+                        height: 55px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 12px;
+
+                        img {
+                            width: 24px;
+                            height: 30px;
+                            object-fit: contain;
+                        }
+                    }
+                    span {
+                        font-weight: 600;
+                        padding-right: 40px;
+                        padding-left: 24px;
+                        display: inline-block;
+                        width: 170px;
+                    }
+                }
+                &:hover {
+                    background-color: $navItemHoverBg;
+                }
+            }
+            .active {
+                background-color: $navItemHoverBg;
+            }
+        }
+    }
+
+    .side_bar_footer {
+        padding-bottom: 16px;
+        opacity: 0;
+        display: none;
+        transition: all 0.3s linear;
+        ul {
+            display: flex;
+            flex-direction: column;
+            li {
+                padding: 6px 0;
+                a {
+                    font-weight: 600;
+                    color: $gray;
+                    text-transform: uppercase;
+                    transition: all 0.2s linear;
+                    &:hover {
+                        transition: all 0.2s ease-in;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

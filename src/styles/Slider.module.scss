@@ -1,0 +1,34 @@
+@import "./variable.scss";
+
+.slider_section {
+    .title {
+        color: $white;
+        font-weight: 400;
+        max-width: 500px;
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .slider_item {
+        .slider_item_img {
+            width: 160px;
+            height: 200px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            cursor: pointer;
+            margin-right: 10px;
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.react-horizontal-scrolling-menu--scroll-container {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
